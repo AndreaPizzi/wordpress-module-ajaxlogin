@@ -1,0 +1,210 @@
+:root{
+    --main-form-backgrod :#f2f2f2;
+    --main-color:#008BCC;
+    --overlay-background : #333333;
+    --divider-color:#ccc;
+    --button-color:#fff;
+    --popup-title-color:#696969;
+
+    --register-icon-color:#008BCC;
+
+    --overlay-background-opacity : .8;
+    --popup-title-size :1.5rem;
+}
+
+#login_wrp {
+    border-radius: 8px;
+    display: none;
+    background-color: var(--main-form-backgrod);
+    position: fixed;
+    top: 100px;
+    padding: 40px 25px 25px 25px;
+    width: 350px;
+    z-index: 9999999999999;
+    left: 50%;
+    margin-left: -200px;
+}
+
+form#login {
+    display: block;
+    overflow: hidden;
+}
+
+.login_overlay {
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-background);
+    opacity: var(--overlay-background-opacity);
+    position: fixed;
+    z-index: 9999999999998;
+}
+
+h2.form_title {
+    width: 100%;
+    text-align: center;
+    font-size:var(--popup-title-size);
+    color:var(--popup-title-color);
+    margin-bottom: 1rem;
+}
+h2.form_title::after {
+    content:"";
+    display:block;
+    height:.13rem;
+    width:100%;
+    background-color:var(--popup-title-color);
+    margin-top: .5rem;
+    opacity: .3;
+}
+
+.divider {
+    display: block;
+    width: 90%;
+    height: .08em;
+    color: var(--main-color);
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--divider-color);
+    margin-top: 2em;
+    margin-bottom: 0em;
+    display:none !important;
+}
+
+.reg_user_btn, .log_user_btn {
+    cursor: pointer;
+    text-align:center;
+    padding-top: .5rem;
+}
+
+.reg_user_btn .fa, .log_user_btn .fa {
+    color: var(--register-icon-color);
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.reg_user_btn:hover, .log_user_btn:hover {
+    text-decoration: underline;
+}
+
+/* Imput Style */
+
+#login_wrp input {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    padding: 0px;
+    color: var(--main-color);
+    padding-left: .2em;
+    padding-right: .2em;
+    margin-top: .3em;
+    margin-bottom: .3em;
+    line-height: 2em;
+    border: 0px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#login_wrp .submit_button {
+    background-color: var(--main-color);
+    border: 0px;
+    float: right;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
+#login_wrp a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: .85em;
+}
+
+#login_wrp a:hover {
+    text-decoration: underline;
+}
+
+#login_wrp a .fa {
+    color: var(--main-color);
+    font-size: 1.3em;
+    margin-right: .3em;
+}
+
+
+.help-block small {
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 67%;
+    text-align: right;
+}
+
+/* Accordion Effect */
+
+.vb-registration-form,
+.login_form_wrp {
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.reg_panel_open,
+.log_panel_open {
+    max-height: 30em;
+}
+
+/* Errori */
+
+.log_error_message {
+    text-align: center;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: .2em;
+}
+
+.show_logout a {
+    font-size: 70% !important;
+    margin-top: 1px;
+}
+
+.close_reg{
+    color: #fff;
+    display: block;
+    z-index: 99999;
+    background-color: #fff;
+    font-size: 132%;
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+    margin-top: 1rem;
+}
+
+.log_user_btn{
+    display:none;
+}
+
+.log_user_btn.active{
+    display:block;
+}
+
+.reg_user_btn{
+    display:none;
+}
+
+.reg_user_btn.active{
+    display:block !important;
+}
+
+.log_user_btn_top{
+    display:block !important;
+}
+
+@media screen and (max-width: 800px) {
+    #login_wrp{
+        margin-left: -175px;
+        top: 1rem;
+    }
+  }
