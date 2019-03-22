@@ -10,6 +10,10 @@ change the href value of logout button if you want redirect to :
 
 <a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
 
+- Homw with WPML
+
+<?php echo str_replace('/en', '', wp_logout_url( icl_get_home_url() ) ); ?>
+
 - External page ( you'll need to make use of the allowed_redirect_hosts filter: ) : 
 
 add_filter('allowed_redirect_hosts','allow_ms_parent_redirect');
